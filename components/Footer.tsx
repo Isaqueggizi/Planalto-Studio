@@ -5,7 +5,8 @@ const Footer: React.FC = () => {
   const creatorImageUrl = "https://scontent-gig4-1.xx.fbcdn.net/v/t39.30808-6/481276841_9317274218353191_9007632082324766986_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFnijSGZgg5Izy9439mDRCiPnZPPDg0ToI-dk88ODROghwNd_R7ohGCobyWU5w6a7STufqUotbhiszDDwq259DF&_nc_ohc=zDWD6kKghggQ7kNvwGnqt6q&_nc_oc=Adl4bMccbCj5I7tBUq1tJMyOLqjqA8UxQ-_tBpRVldIW77TfJ9pJ15Q1PQDGOVZkxpQUZsFHNWS4XlYK8ElrJX-r&_nc_zt=23&_nc_ht=scontent-gig4-1.xx&_nc_gid=9SNiouxH5FMOCWCVnKSsxg&oh=00_AfjceIxzYpBkXHGf9okcnAN-KBtMo59SQ1OlrhJQXoXG-Q&oe=6916CD8C";
 
   return (
-    <footer className="bg-black/50 border-t border-gray-800">
+    <footer className="bg-black/50 border-t border-gray-800/50 relative">
+      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#1E90FF] to-transparent"></div>
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
           
@@ -23,7 +24,7 @@ const Footer: React.FC = () => {
             <img 
               src={creatorImageUrl}
               alt="Foto do Criador" 
-              className="w-12 h-12 rounded-full border-2 border-[#1E90FF] object-cover hover:scale-110 hover:shadow-lg hover:shadow-[#1E90FF]/30 transition-all duration-300"
+              className="w-12 h-12 rounded-full border-2 border-[#1E90FF] object-cover hover:scale-110 hover:shadow-[var(--glow-primary)] transition-all duration-300"
             />
             <div>
                 <p className="text-xs text-gray-400">Uma criação de</p>
@@ -33,9 +34,9 @@ const Footer: React.FC = () => {
           
           {/* Right: Links */}
           <div className="flex gap-6 font-semibold text-sm">
-            <a href="#" className="hover:text-[#1E90FF] transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-[#1E90FF] transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-[#1E90FF] transition-colors">Contact</a>
+            <a href="#" className="text-gray-300 hover:text-white transition-all duration-300 hover:drop-shadow-[var(--glow-primary)]">Terms</a>
+            <a href="#" className="text-gray-300 hover:text-white transition-all duration-300 hover:drop-shadow-[var(--glow-primary)]">Privacy</a>
+            <a href="#" className="text-gray-300 hover:text-white transition-all duration-300 hover:drop-shadow-[var(--glow-primary)]">Contact</a>
           </div>
           
         </div>

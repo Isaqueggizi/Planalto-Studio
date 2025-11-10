@@ -18,13 +18,14 @@ const Templates: React.FC = () => {
         {templates.map((template, index) => (
           <div key={index} className="group relative overflow-hidden rounded-xl border border-gray-800 transform hover:scale-105 hover:shadow-2xl hover:shadow-[#1E90FF]/20 transition-all duration-300 flex flex-col">
             <img src={template.image} alt={template.name} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent group-hover:from-black/60 transition-colors"></div>
+            <div className="absolute inset-0 ring-1 ring-inset ring-transparent group-hover:ring-[#1E90FF]/50 transition-all duration-300 rounded-xl"></div>
             <div className="absolute bottom-0 left-0 p-4">
               <h3 className="text-lg font-bold text-white">{template.name}</h3>
               <p className="text-gray-300 text-sm mt-1">{template.description}</p>
             </div>
-             <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                <button className="text-xs font-bold bg-white/20 backdrop-blur-sm text-white py-1 px-3 rounded-full hover:bg-white/30">Use Template</button>
+             <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button className="text-xs font-bold bg-white/10 backdrop-blur-md text-white py-1 px-3 rounded-full hover:bg-white/20 border border-white/20">Use Template</button>
             </div>
           </div>
         ))}

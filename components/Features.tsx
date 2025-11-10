@@ -9,8 +9,8 @@ const features = [
   },
   {
     icon: <VisualEditorIcon />,
-    title: "Visual Drag & Drop Editor",
-    description: "Fine-tune your generated app with an intuitive visual editor. Adjust colors, text, and layouts with a live preview.",
+    title: "Real-Time AI Editing",
+    description: "Converse with our AI agent to modify your app in real-time. Change colors, add elements, and see the results instantly.",
   },
   {
     icon: <ExportIcon />,
@@ -28,8 +28,8 @@ const Features: React.FC = () => {
       </div>
       <div className="grid md:grid-cols-3 gap-8">
         {features.map((feature, index) => (
-          <div key={index} className="bg-gray-900/50 border border-gray-800 p-8 rounded-xl hover:border-[#1E90FF] transition-all duration-300 transform hover:-translate-y-2">
-            <div className="mb-4 text-[#1E90FF]">
+          <div key={index} className="bg-gradient-to-br from-gray-900/50 to-black/30 border border-gray-800 p-8 rounded-xl hover:border-[#1E90FF] transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#1E90FF]/20">
+            <div className="mb-4 text-[#1E90FF] drop-shadow-[var(--glow-primary)]">
               {feature.icon}
             </div>
             <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>

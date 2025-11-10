@@ -28,3 +28,9 @@ export interface Project {
   files: ProjectFiles;
   deploymentUrl: string;
 }
+
+export interface ChatMessage {
+  sender: 'user' | 'ai';
+  text: string;
+  isLoading?: boolean;
+}
